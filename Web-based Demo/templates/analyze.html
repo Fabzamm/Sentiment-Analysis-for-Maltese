@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="main-title">Analyze Text</h1>
+<form method="POST" action="{{ url_for('analyze') }}">
+    <textarea name="text" placeholder="Enter your Maltese text here..."></textarea>
+    <button type="submit" name="model_type" value="naive_bayes" class="btn green">Use Naive Bayes</button>
+    <button type="submit" name="model_type" value="random_forest" class="btn green">Use Random Forest</button>
+    <button type="submit" name="model_type" value="svm" class="btn green">Use SVM</button>
+</form>
+{% if result %}
+<div id="result">
+    <h2>Analysis Result</h2>
+    <p><strong>Model Used:</strong> <span id="model-used">{{ result.model_used }}</span></p>
+    <p><strong>Input Text:</strong> <span id="input-text">{{ result.input_text }}</span></p>
+    <p><strong>Preprocessed Text:</strong> <span id="preprocessed-text">{{ result.processed_text }}</span></p>
+    <p><strong>Sentiment:</strong> <span id="sentiment-result">{{ result.sentiment }}</span></p>
+    <p><strong>Confidence:</strong> <span id="confidence-result">{{ result.confidence }}%</span></p>
+</div>
+{% endif %}
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sentiment Analysis for Maltese{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        .logo {
+          text-decoration: none;
+          color: #000;
+        }
+        .logo:hover {
+          color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo">Maltese Sentiment</a>
+    </header>
+
+    <main>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024/5 Maltese Sentiment Analysis</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
