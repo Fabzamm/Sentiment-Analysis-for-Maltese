@@ -1,0 +1,476 @@
+@import url(https://db.onlinewebfonts.com/c/e44f2da14818fbcebe36351ec46fc91b?family=Adelle+W01+Bold);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+/* ========== SHARED STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 40px;
+    /* Adjust based on your footer height */
+}
+
+/* Shared Footer Styles */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #718096;
+    border-top: 1px solid #e2e8f0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    z-index: 100;
+    line-height: 1.8;
+}
+
+/* Shared Header Styles */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Shared Button Styles */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.main-heading {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* ========== ANNOTATION PAGE STYLES ========== */
+.annotation-page {
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(232, 230, 230, 1);
+}
+
+.annotation-page body {
+    line-height: 1.8;
+}
+
+.annotation-page .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    /* Added from inline style in index.php */
+}
+
+.annotation-page .logoAnnotatePage {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: "Adelle W01 Bold";
+}
+
+.annotation-page main {
+    text-align: center;
+    padding: 1rem;
+    align-items: center;
+    vertical-align: middle;
+    flex-grow: 1;
+}
+
+.annotation-page .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.annotation-page .main-title {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.annotation-page .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #4a5568;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.annotation-page .btn {
+    width: 105px;
+    height: 42px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.annotation-page .btn.yellow {
+    background-color: #d7a200;
+}
+
+.annotation-page .btn.green {
+    background-color: #109c30;
+}
+
+.annotation-page .btn.red {
+    background-color: #cc1e30;
+}
+
+.annotation-page .btn:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: brightness(1.1);
+}
+
+/* Progress Bar Styles */
+.annotation-page #progress-bar-container {
+    margin: 1rem auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.annotation-page [role="progressbar"] {
+    position: relative;
+    height: 1rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #e2e8f0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cbd5e0;
+}
+
+.annotation-page [role="progressbar"]>div {
+    height: 100%;
+    background-color: #3182ce;
+    transition: width 0.3s ease;
+    will-change: width;
+}
+
+/* Sentence Container Styles */
+.annotation-page #sentences-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.annotation-page .sentence-box {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.annotation-page .sentence {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.annotation-page .annotation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.annotation-page .annotated {
+    opacity: 0.6;
+}
+
+.annotation-page .annotated button {
+    cursor: not-allowed;
+}
+
+/* Instructions Box Styles */
+.annotation-page .instructions-box {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: fit-content;
+    /* margin-left: auto; */
+    margin-right: auto;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    /* Adjusts space between text lines */
+}
+
+.annotation-page .instruction-buttons{
+    display: flex; 
+    flex-direction: row; 
+    gap: 7rem;
+    margin-right: 7rem;
+}
+
+.annotation-page .description-box {
+    max-width: 800px;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 20px auto;
+    text-align: left;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fefefe, #f7f7f7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.annotation-page .description-box p:last-child {
+    margin-bottom: 0;
+}
+
+.annotation-page h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #333;
+    text-align: center;
+}
+
+.annotation-page p{
+    color: #333;
+}
+
+/* ========== HOME PAGE STYLES ========== */
+.home-page {
+    font-family: 'Inter', sans-serif;
+}
+
+.home-page html,
+.home-page body {
+    height: 100%;
+    background-color: #ffe6e6;
+}
+
+.home-page .logo {
+    height: 100px;
+    margin-top: -15px;  /* Moves the logo up out of the header */
+    margin-bottom: -20px;
+}
+
+.home-page .faculty-badge {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.home-page .content {
+    background-color: rgba(232, 230, 230, 1);
+    padding: 40px 40px 60px;
+    flex-grow: 1;
+}
+
+.home-page .description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.home-page .section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.home-page ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.home-page li {
+    margin-bottom: 12px;
+    display: flex;
+    color: #333;
+}
+
+.home-page li::before {
+    content: "• ";
+    margin-right: 10px;
+}
+
+.footer-text {
+    margin-bottom: 30px;
+}
+
+.home-page .btn {
+    background-color: white;
+    color: #333;
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+/* Responsive styles for annotation page */
+@media (max-width: 768px) {
+
+    /* Annotation Page Mobile Styles */
+    .annotation-page .content {
+        max-width: 100%;
+        padding: 0 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .annotation-page .main-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .annotation-page .instructions-box {
+        width: 90%;
+        margin: 1rem auto;
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+
+    .annotation-page #sentences-container {
+        gap: 1rem;
+    }
+
+    .annotation-page .sentence-box {
+        padding: 0.8rem;
+    }
+
+    .annotation-page .annotation-buttons button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Home Page Mobile Styles */
+    .home-page .logo {
+        height: 70px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .home-page .faculty-badge {
+        margin-bottom: 0px;
+    }
+
+    .home-page .content {
+        padding: 20px 20px 80px;
+    }
+
+    .main-heading {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .home-page .section-title {
+        text-align: center;
+    }
+
+    .home-page .btn {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto 60px;
+        padding: 15px 20px;
+    }
+
+    .home-page li {
+        align-items: flex-start;
+    }
+
+    .home-page li::before {
+        flex-shrink: 0;
+    }
+
+    .home-page body {
+        padding-bottom: 60px;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+}
+
+/* Small phones - Home Page */
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 30px;
+    }
+
+    .home-page .content {
+        padding: 15px 15px 50px;
+    }
+
+    footer p {
+        line-height: 1.4;
+        padding: 5px 0;
+    }
+
+    .home-page .btn {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .instruction-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .instruction-buttons {
+        flex-direction: row;
+        justify-content: flex-end; /* Center the buttons */
+        margin-bottom: 2rem;
+        margin-right: 0rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .annotation-page .btn-group {
+        gap: 0.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .annotation-page .annotation-buttons button {
+        width: auto;    /* Adjust to your desired width */
+        height: auto;   /* Adjust to your desired height */
+        font-size: 0.7rem; /* Adjust font size if needed */
+        /* Optionally adjust padding if required */
+    }
+}
+
+@media (max-width: 480px) {
+    .annotation-page .annotation-buttons button[onclick*="Ma nafx"] {
+      margin-left: -0.5rem !important;
+    }
+  }
