@@ -142,7 +142,7 @@ This folder contains the full pipeline for training and using a Naive Bayes sent
 
 ### `Random Forest/`
 
-This folder contains training, evaluation, and export scripts for a Random Forest classifier, alongside supporting data.
+This folder contains training, evaluation, and export scripts for the Random Forest classifier, alongside supporting data.
 
 **Key Files:**
 
