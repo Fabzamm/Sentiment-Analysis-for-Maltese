@@ -85,8 +85,8 @@ To run the annotation platform on your machine:
 
 #### Requirements
 
-PHP installed (e.g., via XAMPP, MAMP, or native install),
-Python (for processing scripts),
+- PHP installed (e.g., via XAMPP, MAMP, or native install)
+- Python (for processing scripts),
 
 #### Using PHP’s built-in server (Recommended for testing)
 
