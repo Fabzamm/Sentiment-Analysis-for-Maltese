@@ -1,3 +1,89 @@
+## `Annotation Website/`
+
+This folder contains a simple PHP- and JavaScript-based web platform used for manually annotating Maltese-language sentences with sentiment labels.
+
+### Functionality
+
+1. **Sentence Presentation**
+   Up to 3 sentences at a time are displayed to users, selected from the shared dataset `combined_data.json`.
+
+2. **Annotation Logic**
+
+   * Sentences are selected based on:
+
+     * Having fewer than `ANNOTATION_THRESHOLD` (currently 3) annotations.
+     * Being marked as ambiguous (i.e., no clear majority sentiment).
+   * User identity is managed with a browser cookie.
+   * Sentence order is randomized within priority groups.
+
+3. **Annotation Submission**
+
+   * Annotations are sent via `api_annotate.php` and stored directly in `combined_data.json`, including sentiment label, timestamp, and user ID.
+
+4. **Progress Feedback**
+
+   * Users receive visual feedback on annotation progress within the batch.
+
+5. **Post-Processing Scripts**
+
+   * Python scripts help analyze and export the annotation data for training and evaluation.
+
+---
+
+### Project Structure
+
+| File/Folder                    | Description                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------- |
+| `index.php`                    | Main langing page of the website with project overview, consent form, and link to annotation interface.          |
+| `annotationPage.php`           | Main annotation interface. Implements sentence selection and user interaction.               |
+| `api_annotate.php`             | Backend endpoint for saving annotations. Handles user ID tracking via cookies.               |
+| `finishPage.php`               | Thank-you page shown after users opt to stop annotating.                                     |
+| `combined_data.json`           | Master data file containing all sentences and their annotation metadata.                     |
+| `analysis.py`                  | Prints statistics (e.g., annotation counts per sentence) from `combined_data.json`.          |
+| `saveAnnotations.py`           | Exports sentences with clear majority sentiment (including neutral) to `annotated_data.csv`. |
+| `saveAnnotationsNoNeutrals.py` | Same as above, but excludes sentences with a neutral majority.                               |
+| `static/css/styles.css`        | Stylesheet for the website (assumed).                                                        |
+| `static/js/script.js`          | Handles button actions and API calls on the annotation page.                                 |
+| `UM Logo.png`                  | University of Malta logo (for branding).                                                     |
+
+---
+
+### 👣 User Flow
+
+1. User opens `index.php` and agrees to participate.
+2. They proceed to `annotationPage.php`, which loads up to 3 unannotated or ambiguous sentences.
+3. Clicking a sentiment button (e.g., **Pożittiv**, **Negattiv**, etc.) submits the response.
+4. Data is sent via `script.js` → `api_annotate.php` → `combined_data.json`.
+5. When finished, the user clicks **Ieqaf**, landing on `finishPage.php`.
+
+---
+
+### 🧪 Annotation Processing Scripts
+
+After collecting annotations, you can generate clean datasets using the following scripts:
+
+* **View statistics**:
+
+  ```bash
+  python analysis.py
+  ```
+
+* **Export with all majority sentiments (incl. neutral)**:
+
+  ```bash
+  python saveAnnotations.py
+  ```
+
+* **Export excluding neutral**:
+
+  ```bash
+  python saveAnnotationsNoNeutrals.py
+  ```
+
+These scripts produce CSV files that can be used for training and evaluation.
+
+---
+
 ## `Scrapers/` Directory
 
 This directory contains all the scraping and preprocessing scripts used to collect and prepare data for Maltese sentiment analysis. The content here was developed by **Ian** and **Matthew**.
