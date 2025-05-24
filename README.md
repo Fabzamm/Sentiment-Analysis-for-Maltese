@@ -148,7 +148,7 @@ This folder contains training, evaluation, and export scripts for the Random For
 
 * `Random Forest.ipynb` – Performs data loading, preprocessing, training, and evaluation.
 * `randomForestModel_Extended.pkl` – Trained Random Forest model.
-* `vectorizer_Extended.pkl` – Fitted vectorizer (e.g., TF-IDF or CountVectorizer) used during training.
+* `vectorizer_Extended.pkl` – Fitted vectorizer used during training.
 * `Sentiment CSVs/` – Cleaned and preprocessed datasets:
 
   * `crowdsourced_dataset_lowercased_lemmatized.csv`
