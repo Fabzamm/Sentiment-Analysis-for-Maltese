@@ -80,6 +80,8 @@ After collecting annotations, you can generate clean datasets using the followin
   python saveAnnotationsNoNeutrals.py
   ```
 
+---
+
 ### Running the Annotation Website Locally
 To run the annotation platform on your machine:
 
