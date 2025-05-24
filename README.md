@@ -354,7 +354,7 @@ Then navigate to `http://127.0.0.1:5000` in your browser.
 
    * Uses pipeline or manual preprocessing.
    * Predicts sentiment (positive/negative).
-   * Computes confidence score (if available).
+   * Computes confidence score.
 3. The result is displayed:
 
    * Input text
