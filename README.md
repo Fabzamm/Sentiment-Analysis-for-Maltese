@@ -1,6 +1,6 @@
 ## `Annotation Website/` Directory
 
-This folder contains a simple PHP and JavaScript-based web platform used for manually annotating Maltese-language sentences with sentiment labels.
+This folder (developed by Fabio) contains a simple PHP and JavaScript-based web platform used for manually annotating Maltese-language sentences with sentiment labels.
 
 ### Functionality
 
@@ -48,7 +48,7 @@ This folder contains a simple PHP and JavaScript-based web platform used for man
 
 ---
 
-### 👣 User Flow
+### User Flow
 
 1. User opens `index.php` and agrees to participate.
 2. They proceed to `annotationPage.php`, which loads up to 3 unannotated or ambiguous sentences.
