@@ -80,11 +80,23 @@ After collecting annotations, you can generate clean datasets using the followin
   python saveAnnotationsNoNeutrals.py
   ```
 
-These scripts produce CSV files that can be used for training and evaluation.
+### Running the Annotation Website Locally
+To run the annotation platform on your machine:
 
----
+#### Requirements
 
-Great! Here's a detailed section you can include in your `README.md` to describe the `Machine Learning Algorithms/` folder. This maintains consistency with the previous sections and gives a clear, professional breakdown of structure, authorship, and function.
+PHP installed (e.g., via XAMPP, MAMP, or native install),
+Python (for processing scripts),
+
+#### Using PHP’s built-in server (Recommended for testing)
+
+```bash
+cd "Annotation Website"
+php -S localhost:8000
+```
+
+Then open your browser and go to:
+[http://localhost:8000/index.php](http://localhost:8000/index.php)
 
 ---
 
