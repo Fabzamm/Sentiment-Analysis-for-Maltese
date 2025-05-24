@@ -158,7 +158,7 @@ This folder contains training, evaluation, and export scripts for the Random For
 
 ### `SVM/`
 
-This folder mirrors the structure of the Naive Bayes folder, tailored for a Support Vector Machine classifier.
+This folder adapts the Naive Bayes folder for building the Support Vector Machine classifier.
 
 **Key Files:**
 
