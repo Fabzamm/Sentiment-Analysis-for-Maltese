@@ -44,7 +44,7 @@ This folder (developed by Fabio) contains a simple PHP and JavaScript-based web 
 | `saveAnnotationsNoNeutrals.py` | Same as above, but excludes sentences with a neutral majority.                               |
 | `static/css/styles.css`        | Stylesheet for the website.                                                                  |
 | `static/js/script.js`          | Handles button actions and API calls on the annotation page.                                 |
-| `UM Logo.png`                  | University of Malta logo (for branding).                                                     |
+| `UM Logo.png`                  | University of Malta logo.                                                                    |
 
 ---
 
@@ -174,7 +174,7 @@ This folder mirrors the structure of the Naive Bayes folder, tailored for a Supp
 Two primary datasets were used across all models:
 
 * **Crowdsourced Dataset** – Collected via the annotation website (`combined_data.json` → CSV).
-* **JerBarnes Dataset** – Pre-collected Maltese language dataset with labeled sentiment.
+* **JerBarnes Dataset** – Pre-collected Maltese language dataset with labelled sentiment.
 
 Each dataset has several variants based on preprocessing options:
 
