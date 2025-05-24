@@ -1,6 +1,6 @@
-## `Annotation Website/`
+## `Annotation Website/` Directory
 
-This folder contains a simple PHP- and JavaScript-based web platform used for manually annotating Maltese-language sentences with sentiment labels.
+This folder contains a simple PHP and JavaScript-based web platform used for manually annotating Maltese-language sentences with sentiment labels.
 
 ### Functionality
 
@@ -58,7 +58,7 @@ This folder contains a simple PHP- and JavaScript-based web platform used for ma
 
 ---
 
-### 🧪 Annotation Processing Scripts
+### Annotation Processing Scripts
 
 After collecting annotations, you can generate clean datasets using the following scripts:
 
