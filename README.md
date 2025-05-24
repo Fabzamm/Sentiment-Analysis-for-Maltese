@@ -42,7 +42,7 @@ This folder (developed by Fabio) contains a simple PHP and JavaScript-based web 
 | `analysis.py`                  | Prints statistics (e.g., annotation counts per sentence) from `combined_data.json`.          |
 | `saveAnnotations.py`           | Exports sentences with clear majority sentiment (including neutral) to `annotated_data.csv`. |
 | `saveAnnotationsNoNeutrals.py` | Same as above, but excludes sentences with a neutral majority.                               |
-| `static/css/styles.css`        | Stylesheet for the website (assumed).                                                        |
+| `static/css/styles.css`        | Stylesheet for the website.                                                                  |
 | `static/js/script.js`          | Handles button actions and API calls on the annotation page.                                 |
 | `UM Logo.png`                  | University of Malta logo (for branding).                                                     |
 
