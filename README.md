@@ -86,7 +86,7 @@ These scripts produce CSV files that can be used for training and evaluation.
 
 ## `Scrapers/` Directory
 
-This directory contains all the scraping and preprocessing scripts used to collect and prepare data for Maltese sentiment analysis. The content here was developed by **Ian** and **Matthew**.
+This directory contains all the scraping and preprocessing scripts used to collect and prepare data for Maltese sentiment analysis. The content here was developed by Ian and Matthew.
 
 ### Top-Level Notebooks
 
