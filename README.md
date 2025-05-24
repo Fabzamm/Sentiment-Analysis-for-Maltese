@@ -1,8 +1,8 @@
-## 📁 `Scrapers/` Directory
+## `Scrapers/` Directory
 
 This directory contains all the scraping and preprocessing scripts used to collect and prepare data for Maltese sentiment analysis. The content here was developed by **Ian** and **Matthew**.
 
-### 📄 Top-Level Notebooks
+### Top-Level Notebooks
 
 * **`RedditScraper.ipynb`**
   Developed by Ian. This notebook scrapes Reddit comments using specific search queries or subreddit targets.
@@ -12,11 +12,11 @@ This directory contains all the scraping and preprocessing scripts used to colle
 
 ---
 
-### 📁 `Facebook Scraper and Data Cleaning Pipeline/` Folder
+### `Facebook Scraper and Data Cleaning Pipeline/` Folder
 
 This is a complete Facebook scraping and data preprocessing pipeline developed by **Matthew**. It includes the following components:
 
-#### 📄 Main Scripts
+#### Main Scripts
 
 * **`main.py`**
   This is the entry point to the Facebook data pipeline. Running this script will:
@@ -31,7 +31,7 @@ This is a complete Facebook scraping and data preprocessing pipeline developed b
   * Paths to data directories.
   * URLs or IDs of Facebook groups to scrape.
 
-#### 📁 `classes/` Folder
+#### `classes/` Folder
 
 * **`cleaning.py`**
   Contains the preprocessing pipeline for cleaning and transforming raw JSON data (e.g., text normalization, filtering, anonymization steps).
@@ -44,7 +44,7 @@ This is a complete Facebook scraping and data preprocessing pipeline developed b
   * `names.txt` and `surnames.txt`
     Used for anonymizing personal names in scraped text data.
 
-#### 📁 `data/` Folder
+#### `data/` Folder
 
 The full preprocessing pipeline generates data across the following stages:
 
@@ -68,9 +68,9 @@ The full preprocessing pipeline generates data across the following stages:
 
 ---
 
-### ✅ How to Use
+### How to Use
 
-Running main.py will automatically:
+Running `main.py` will automatically:
 
 * Scrape Facebook data (based on `config.py`)
 * Apply all preprocessing steps
