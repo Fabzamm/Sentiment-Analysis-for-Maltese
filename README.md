@@ -34,7 +34,7 @@ This folder (developed by Fabio) contains a simple PHP and JavaScript-based web 
 
 | File/Folder                    | Description                                                                                  |
 | ------------------------------ | -------------------------------------------------------------------------------------------- |
-| `index.php`                    | Main langing page of the website with project overview, consent form, and link to annotation interface.          |
+| `index.php`                    | Main landing page of the website with project overview, consent form, and link to annotation interface.          |
 | `annotationPage.php`           | Main annotation interface. Implements sentence selection and user interaction.               |
 | `api_annotate.php`             | Backend endpoint for saving annotations. Handles user ID tracking via cookies.               |
 | `finishPage.php`               | Thank-you page shown after users opt to stop annotating.                                     |
