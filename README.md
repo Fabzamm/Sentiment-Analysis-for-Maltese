@@ -84,6 +84,91 @@ These scripts produce CSV files that can be used for training and evaluation.
 
 ---
 
+Great! Here's a detailed section you can include in your `README.md` to describe the `Machine Learning Algorithms/` folder. This maintains consistency with the previous sections and gives a clear, professional breakdown of structure, authorship, and function.
+
+---
+
+## `Machine Learning Algorithms/` Directory
+
+This directory contains all the model development notebooks, training datasets, and finalized models used for Maltese sentiment analysis. Each subfolder represents a complete workflow for a specific algorithm.
+
+---
+
+### Subfolders Overview
+
+| Folder           | Model                        | Developer |
+| ---------------- | ---------------------------- | --------- |
+| `Naive Bayes/`   | Naive Bayes Classifier       | Matthew   |
+| `Random Forest/` | Random Forest Classifier     | Fabio     |
+| `SVM/`           | Support Vector Machine (SVM) | Ian       |
+
+---
+
+### `Naive Bayes/`
+
+This folder contains the full pipeline for training and using a Naive Bayes sentiment classifier.
+
+**Files:**
+
+* `01_Data_Preprocessing_And_Exploration.ipynb` – Initial EDA and data cleaning.
+* `02_Model_Training_and_Evaluation.ipynb` – Trains the model, evaluates its performance.
+* `03_Model_Finalization_and_Serialization.ipynb` – Finalizes preprocessing steps and exports the model.
+* `04_Model_Usage_Demonstration.ipynb` – Demonstrates how to load and use the trained model.
+* `naive_bayes_maltese_sentiment_analyzer.joblib` – Serialized scikit-learn pipeline model.
+* `preprocessor.py` – Contains the `MalteseTextPreprocessor` class used in the pipeline.
+* `data/` – Multiple versions of the datasets with different preprocessing configurations.
+* `names/` – `names.txt` and `surnames.txt`, used for anonymization purposes.
+
+---
+
+### `Random Forest/`
+
+This folder contains training, evaluation, and export scripts for a Random Forest classifier, alongside supporting data.
+
+**Key Files:**
+
+* `Random Forest.ipynb` – Performs data loading, preprocessing, training, and evaluation.
+* `randomForestModel_Extended.pkl` – Trained Random Forest model.
+* `vectorizer_Extended.pkl` – Fitted vectorizer (e.g., TF-IDF or CountVectorizer) used during training.
+* `Sentiment CSVs/` – Cleaned and preprocessed datasets:
+
+  * `crowdsourced_dataset_lowercased_lemmatized.csv`
+  * `jerbarnes_dataset_lowercased_lemmatized.csv`
+
+---
+
+### `SVM/`
+
+This folder mirrors the structure of the Naive Bayes folder, tailored for a Support Vector Machine classifier.
+
+**Key Files:**
+
+* `02_Model_Training_and_Evaluation_SVM.ipynb` – Trains and evaluates the SVM model.
+* `03_Model_Finalization_and_Serialization.ipynb` – Saves the trained pipeline.
+* `04_Model_Usage_Demonstration.ipynb` – Shows how to load and use the SVM model.
+* `svm_maltese_sentiment_analyzer.joblib` – Final trained SVM model with preprocessing pipeline.
+* `preprocessor.py` – Same preprocessing class used as in Naive Bayes.
+* `data/` – Preprocessed dataset files used for training:
+
+  * `crowdsourced_dataset_selective_lowercased_lemmatized.csv`
+  * `jerbarnes_dataset_selective_lowercased_lemmatized.csv`
+
+---
+
+### Dataset Sources
+
+Two primary datasets were used across all models:
+
+* **Crowdsourced Dataset** – Collected via the annotation website (`combined_data.json` → CSV).
+* **JerBarnes Dataset** – Pre-collected Maltese language dataset with labeled sentiment.
+
+Each dataset has several variants based on preprocessing options:
+
+* Lowercased vs. Selective Lowercased
+* With or Without Lemmatization
+
+---
+
 ## `Scrapers/` Directory
 
 This directory contains all the scraping and preprocessing scripts used to collect and prepare data for Maltese sentiment analysis. The content here was developed by Ian and Matthew.
