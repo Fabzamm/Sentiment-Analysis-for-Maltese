@@ -1,7 +1,7 @@
 # Sentiment Analysis for Maltese
 
-This repository contains the code and resources for a GAPT submission by Matthew Vella, Fabio Zammit, and Ian Caruana.
-It includes tools for data scraping, preprocessing, annotation, and export for  sentiment analysis research on Maltese-language text.
+This repository contains the code and resources for the GAPT submission by Matthew Vella, Fabio Zammit, and Ian Caruana.
+It covers data scraping, preprocessing, annotation, model training and a web-based models demo.
 
 ## `Annotation Website/` Directory
 
