@@ -177,3 +177,91 @@ Running `main.py` will automatically:
 * Output the final dataset to `data/06_final/combined_data.json`
 
 ---
+
+## `Web-based Demo/` — Directory
+
+This folder contains a web-based demo application built using Flask that allows users to input Maltese text and receive real-time sentiment predictions from three different machine learning models: Naive Bayes, Random Forest, and SVM.
+
+This demo serves as a user-friendly way to explore how the models classify sentiment.
+
+---
+
+### Folder Structure
+
+| Path              | Description                                                               |
+| ----------------- | ------------------------------------------------------------------------- |
+| `app.py`          | Main Flask app. Serves pages and handles inference using selected models. |
+| `preprocessor.py` | Custom Maltese text preprocessing functions used by Random Forest model.  |
+| `models/`         | Contains all trained sentiment analysis models and vectorizers.           |
+| `static/`         | Static assets (CSS and JS).                                               |
+| `templates/`      | HTML templates used by the Flask frontend.                                |
+
+---
+
+### Models Overview
+
+#### Naive Bayes (Matthew)
+
+* File: `naive_bayes_maltese_sentiment_analyzer.joblib`
+* Wrapped in a `scikit-learn` pipeline.
+* Uses `MalteseTextPreprocessor` class for text cleaning and lemmatization.
+* Prediction and preprocessing are handled within the pipeline.
+
+#### Random Forest (Fabio)
+
+* Files: `randomForestModel_Extended.pkl` and `vectorizer_Extended.pkl`
+* Preprocessing is handled *manually* in `app.py` via functions from `preprocessor.py`:
+
+  * `emoji_to_text()`
+  * `tokenise()`
+  * `clean_tokens()`
+  * `selective_lowercase()`
+  * `get_lemma()` (uses MLRS Gabra API)
+* Vectorized with `vectorizer_Extended.pkl`.
+
+#### SVM (Ian)
+
+* File: `svm_maltese_sentiment_analyzer.joblib`
+* Also a `scikit-learn` pipeline.
+* Uses the same `MalteseTextPreprocessor` as Naive Bayes.
+
+---
+
+### User Interface (Frontend)
+
+* **`analyze.html`** – Main interface with input box, model selector, and result display.
+* **`layout.html`** – Base template for page layout.
+* **CSS/JS** – Located in `static/css/styles.css` and `static/js/script.js`.
+
+---
+
+### Running the Demo
+
+To run the Flask web app:
+
+```bash
+cd "Web-based Demo"
+python app.py
+```
+
+Then navigate to `http://127.0.0.1:5000` in your browser.
+
+---
+
+### How It Works
+
+1. User enters text and selects a model.
+2. `app.py` processes the request:
+
+   * Uses pipeline or manual preprocessing.
+   * Predicts sentiment (positive/negative).
+   * Computes confidence score (if available).
+3. The result is displayed:
+
+   * Input text
+   * Preprocessed text
+   * Predicted sentiment
+   * Confidence level
+   * Model used
+
+---
