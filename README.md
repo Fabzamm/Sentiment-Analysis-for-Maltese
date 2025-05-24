@@ -5,11 +5,25 @@ This directory contains all the scraping and preprocessing scripts used to colle
 ### Top-Level Notebooks
 
 * **`RedditScraper.ipynb`**
-  Developed by Ian. This notebook scrapes Reddit comments using specific search queries or subreddit targets.
+    Developed by Ian. This notebook is designed to scrape comments from a predefined list of Reddit posts.
+
+    To use it:
+    1.  Enter your Reddit API credentials within the notebook.
+    2.  Populate the `post_ids` list with the IDs of the Reddit posts you wish to scrape.
+    3.  Execute all cells in the notebook.
+
+    The extracted comments will be saved to a JSON file named `reddit_comments.json`.
 
 * **`Youtube_scraper.ipynb`**
-  Developed by Ian. This notebook extracts comments from YouTube videos, optionally filtering by Maltese language content.
+    Developed by Ian. This notebook is designed to scrape comments from all videos of a specified YouTube channel.
 
+    To use it:
+    1.  Enter your YouTube Data API key in the `api_key` variable.
+    2.  Specify the `channel_username` for the YouTube channel you want to scrape.
+    3.  You can adjust the `max_comments` parameter within the `get_comments` function to control how many comments are fetched per video (default is 1000).
+    4.  Run all cells in the notebook.
+
+    The scraped comments will be saved to a JSON file named after the `channel_username` (e.g., `JonMalliaPodcast.json`).
 ---
 
 ### `Facebook Scraper and Data Cleaning Pipeline/` Folder
